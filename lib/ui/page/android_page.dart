@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AndroidPage extends StatefulWidget {
-  AndroidPage({super.key, required this.title});
-
-  final String title;
+  AndroidPage({super.key,});
 
   @override
   State<AndroidPage> createState() => _AndroidPageState();

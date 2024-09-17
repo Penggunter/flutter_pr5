@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MacOsPage extends StatefulWidget {
-  MacOsPage({super.key, required this.title});
-
-  final String title;
+  MacOsPage({super.key,});
 
   @override
   State<MacOsPage> createState() => _MacOsPageState();

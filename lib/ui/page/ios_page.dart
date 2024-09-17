@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class IosPage extends StatefulWidget {
-  IosPage({super.key, required this.title});
-
-  final String title;
+  IosPage({super.key,});
 
   @override
   State<IosPage> createState() => _IosPageState();

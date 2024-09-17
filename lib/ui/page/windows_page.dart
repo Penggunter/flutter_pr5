@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WindowsPage extends StatefulWidget {
-  WindowsPage({super.key, required this.title});
-
-  final String title;
+  WindowsPage({super.key,});
 
   @override
   State<WindowsPage> createState() => _WindowsPageState();

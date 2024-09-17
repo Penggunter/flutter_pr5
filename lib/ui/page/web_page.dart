@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WebPage extends StatefulWidget {
-  WebPage({super.key, required this.title});
-
-  final String title;
+  WebPage({super.key,});
 
   @override
   State<WebPage> createState() => _WebPageState();
