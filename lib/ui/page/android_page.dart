@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
 class AndroidPage extends StatefulWidget {
   AndroidPage({super.key,});
@@ -12,6 +15,11 @@ class _AndroidPageState extends State<AndroidPage> {
   Color _themeColor = Color.fromARGB(255, 35, 206, 32);
   String _urlIcon = 'https://cdn-icons-png.flaticon.com/512/174/174836.png';
   String _text = 'Hello android user';
+
+  Future<String> _getFilePath() async {
+    final directory = await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +41,20 @@ class _AndroidPageState extends State<AndroidPage> {
 
             Text(
               _text,
+            ),
+            FutureBuilder<String>(
+              future: _getFilePath(), // Асинхронная функция
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return CircularProgressIndicator(); // Показываем индикатор загрузки
+                } else if (snapshot.hasError) {
+                  return Text('Ошибка: ${snapshot.error}');
+                } else if (snapshot.hasData) {
+                  return Text('Файловая директория: ${snapshot.data}');
+                } else {
+                  return Text('Не удалось получить путь к директории');
+                }
+              },
             ),
           ],
         ),
