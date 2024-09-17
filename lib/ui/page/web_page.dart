@@ -34,6 +34,9 @@ class _WebPageState extends State<WebPage> {
             Text(
               _text,
             ),
+            Text(
+               'Файловая система недоступна для веб-платформы',
+            )
           ],
         ),
       ),
