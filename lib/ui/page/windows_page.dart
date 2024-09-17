@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class AndroidPage extends StatefulWidget {
-  AndroidPage({super.key, required this.title});
+class WindowsPage extends StatefulWidget {
+  WindowsPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<AndroidPage> createState() => _AndroidPageState();
+  State<WindowsPage> createState() => _WindowsPageState();
 }
 
-class _AndroidPageState extends State<AndroidPage> {
-  String _textBar = 'Android Page';
-  Color _themeColor = Color.fromARGB(255, 35, 206, 32);
-  String _urlIcon = 'https://cdn-icons-png.flaticon.com/512/174/174836.png';
-  String _text = 'Hello android user';
+class _WindowsPageState extends State<WindowsPage> {
+  String _textBar = 'Windows Page';
+  Color _themeColor = Color.fromARGB(255, 8, 140, 211);
+  String _urlIcon = 'https://cdn-icons-png.flaticon.com/512/906/906308.png';
+  String _text = 'Hello windows user';
 
   @override
   Widget build(BuildContext context) {
